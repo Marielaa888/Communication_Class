@@ -14,6 +14,7 @@ HISTOGRAM_FILL_COLOR = "#4682B4"    # steel blue (bar fill)
 HISTOGRAM_EDGE_COLOR = "#1F3B57"    # deep navy (bar outline)
 SCATTER_COLOR = "#4682B4"           # steel blue (point fill)
 SCATTER_EDGE_COLOR = "#1F3B57"      # deep navy (point outline)
+SCATTER_FILL_BELOW_COLOR = "#C6E2F0"  # baby blue, shaded area under the points
 
 # Font used for all chart text (labels, title, ticks).
 FONT_NAME = "FreeSans"
@@ -88,7 +89,23 @@ def scatterplot(df, x_column, y_column):
         color=SCATTER_COLOR,
         edgecolor=SCATTER_EDGE_COLOR,
         marker="h",
+        zorder=3,
     )
+
+    # Shade everything below the points, following their shape from
+    # left to right.
+    sorted_df = df.sort_values(by=x_column)
+    bottom = ax.get_ylim()[0]
+    ax.fill_between(
+        sorted_df[x_column],
+        sorted_df[y_column],
+        bottom,
+        color=SCATTER_FILL_BELOW_COLOR,
+        alpha=0.5,
+        zorder=1,
+    )
+    ax.set_ylim(bottom=bottom)
+
     ax.set_xlabel(x_column)
     ax.set_ylabel(y_column)
     ax.set_title(
