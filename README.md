@@ -33,12 +33,13 @@ df = pd.DataFrame({
     "Scores": [92, 85, 74, 96, 88, 79, 90, 83],
 })
 
-histogram(df, "Absences")
-
 # Both functions return the Axes object, so you can customize it further,
 # like overriding the auto-generated title:
-ax = scatterplot(df, "Absences", "Scores")
-ax.set_title("Student Scores and Absenteeism")
+ax1 = histogram(df, "Absences")
+ax1.set_title("Student Scores and Absenteeism")
+
+ax2 = scatterplot(df, "Absences", "Scores")
+ax2.set_title("Student Scores and Absenteeism")
 ```
 
 ## License
