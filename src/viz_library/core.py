@@ -14,7 +14,7 @@ HISTOGRAM_FILL_COLOR = "#87A96B"    # eucalyptus green (bar fill)
 HISTOGRAM_EDGE_COLOR = "#2F5D50"    # deep pine green (bar outline)
 SCATTER_COLOR = "#87A96B"           # eucalyptus green (point fill)
 SCATTER_EDGE_COLOR = "#2F5545"      # deep pine green (point outline)
-CHART_BACKGROUND_COLOR = "#C6E2F0"  # baby blue, used semi-transparent
+CHART_BACKGROUND_COLOR = "#A3B9CC"  # muted denim, used semi-transparent
 
 # Font used for all chart text (labels, title, ticks).
 FONT_NAME = "FreeSans"
@@ -35,6 +35,8 @@ def histogram(df, column):
 
     plt.rcParams["font.family"] = FONT_NAME
     fig, ax = plt.subplots()
+    fig.patch.set_facecolor(CHART_BACKGROUND_COLOR)
+    fig.patch.set_alpha(0.1)
     ax.set_facecolor(CHART_BACKGROUND_COLOR)
     ax.patch.set_alpha(0.1)
     ax.hist(
@@ -72,6 +74,8 @@ def scatterplot(df, x_column, y_column):
 
     plt.rcParams["font.family"] = FONT_NAME
     fig, ax = plt.subplots()
+    fig.patch.set_facecolor(CHART_BACKGROUND_COLOR)
+    fig.patch.set_alpha(0.1)
     ax.set_facecolor(CHART_BACKGROUND_COLOR)
     ax.patch.set_alpha(0.1)
     ax.scatter(
