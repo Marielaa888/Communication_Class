@@ -69,7 +69,7 @@ def scatterplot(df, x_column, y_column):
     plt.rcParams["font.family"] = FONT_NAME
     fig, ax = plt.subplots()
     ax.set_facecolor(SCATTER_BACKGROUND_COLOR)
-    ax.patch.set_alpha(0.3)
+    ax.patch.set_alpha(0.1)
     ax.scatter(
         df[x_column],
         df[y_column],
