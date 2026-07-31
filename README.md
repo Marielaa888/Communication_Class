@@ -29,12 +29,16 @@ import pandas as pd
 from viz_library import histogram, scatterplot
 
 df = pd.DataFrame({
-    "absences": [2, 8, 15, 0, 5, 11, 3, 9],
-    "exam_score": [92, 85, 74, 96, 88, 79, 90, 83],
+    "Absences": [2, 8, 15, 0, 5, 11, 3, 9],
+    "Scores": [92, 85, 74, 96, 88, 79, 90, 83],
 })
 
-histogram(df, "absences")
-scatterplot(df, "absences", "exam_score")
+histogram(df, "Absences")
+
+# Both functions return the Axes object, so you can customize it further,
+# like overriding the auto-generated title:
+ax = scatterplot(df, "Absences", "Scores")
+ax.set_title("Student Scores and Absenteeism")
 ```
 
 ## License
