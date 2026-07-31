@@ -9,11 +9,12 @@ further (e.g. add a title or save it to a file).
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# Cool, calm shades of green used across both chart types.
-HISTOGRAM_FILL_COLOR = "#87A96B"    # eucalyptus green (bar fill)
-HISTOGRAM_EDGE_COLOR = "#2F5D50"    # deep pine green (bar outline)
-SCATTER_COLOR = "#87A96B"           # eucalyptus green (point fill)
-SCATTER_EDGE_COLOR = "#2F5545"      # deep pine green (point outline)
+# Bright, cool-toned green used across both chart types (blends well
+# with the light blue background).
+HISTOGRAM_FILL_COLOR = "#009B72"    # emerald green (bar fill)
+HISTOGRAM_EDGE_COLOR = "#004D39"    # deep emerald (bar outline)
+SCATTER_COLOR = "#009B72"           # emerald green (point fill)
+SCATTER_EDGE_COLOR = "#004D39"      # deep emerald (point outline)
 CHART_BACKGROUND_COLOR = "#A3B9CC"  # muted denim, used semi-transparent
 
 # Font used for all chart text (labels, title, ticks).
