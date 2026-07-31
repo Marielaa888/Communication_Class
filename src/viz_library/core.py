@@ -15,6 +15,9 @@ HISTOGRAM_EDGE_COLOR = "#2F5D50"    # deep pine green (bar outline)
 SCATTER_COLOR = "#4C8577"           # muted teal-green (point fill)
 SCATTER_EDGE_COLOR = "#2F5545"      # deep pine green (point outline)
 
+# Font used for all chart text (labels, title, ticks).
+FONT_NAME = "Adobe Devanagari"
+
 
 def histogram(df, column):
     """Plot a histogram of a single numeric column in a DataFrame.
@@ -29,6 +32,7 @@ def histogram(df, column):
     if column not in df.columns:
         raise ValueError(f"Column '{column}' not found in DataFrame")
 
+    plt.rcParams["font.family"] = FONT_NAME
     fig, ax = plt.subplots()
     ax.hist(
         df[column].dropna(),
@@ -59,6 +63,7 @@ def scatterplot(df, x_column, y_column):
     if y_column not in df.columns:
         raise ValueError(f"Column '{y_column}' not found in DataFrame")
 
+    plt.rcParams["font.family"] = FONT_NAME
     fig, ax = plt.subplots()
     ax.scatter(
         df[x_column],
