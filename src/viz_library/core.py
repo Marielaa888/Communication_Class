@@ -42,6 +42,8 @@ def histogram(df, column):
     ax.set_xlabel(column)
     ax.set_ylabel("Frequency")
     ax.set_title(f"Histogram of {column}")
+    ax.spines["top"].set_visible(False)
+    ax.spines["right"].set_visible(False)
 
     plt.show()
     return ax
@@ -74,6 +76,8 @@ def scatterplot(df, x_column, y_column):
     ax.set_xlabel(x_column)
     ax.set_ylabel(y_column)
     ax.set_title(f"{y_column} vs {x_column}")
+    ax.spines["top"].set_visible(False)
+    ax.spines["right"].set_visible(False)
 
     plt.show()
     return ax
