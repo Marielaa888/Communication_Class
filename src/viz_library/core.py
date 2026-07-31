@@ -10,7 +10,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Calm blue used across both chart types.
-HISTOGRAM_FILL_COLOR = "#4682B4"    # steel blue (bar fill)
+HISTOGRAM_FILL_COLOR = "#C6E2F0"    # baby blue (bar fill)
 HISTOGRAM_EDGE_COLOR = "#1F3B57"    # deep navy (bar outline)
 SCATTER_COLOR = "#4682B4"           # steel blue (point fill)
 SCATTER_EDGE_COLOR = "#1F3B57"      # deep navy (point outline)
