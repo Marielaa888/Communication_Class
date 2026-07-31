@@ -9,6 +9,12 @@ further (e.g. add a title or save it to a file).
 import pandas as pd
 import matplotlib.pyplot as plt
 
+# Cool, calm shades of green used across both chart types.
+HISTOGRAM_FILL_COLOR = "#7FB3A3"    # muted seafoam green (bar fill)
+HISTOGRAM_EDGE_COLOR = "#2F5D50"    # deep pine green (bar outline)
+SCATTER_COLOR = "#4C8577"           # muted teal-green (point fill)
+SCATTER_EDGE_COLOR = "#2F5545"      # deep pine green (point outline)
+
 
 def histogram(df, column):
     """Plot a histogram of a single numeric column in a DataFrame.
@@ -24,7 +30,11 @@ def histogram(df, column):
         raise ValueError(f"Column '{column}' not found in DataFrame")
 
     fig, ax = plt.subplots()
-    ax.hist(df[column].dropna())
+    ax.hist(
+        df[column].dropna(),
+        color=HISTOGRAM_FILL_COLOR,
+        edgecolor=HISTOGRAM_EDGE_COLOR,
+    )
     ax.set_xlabel(column)
     ax.set_ylabel("Frequency")
     ax.set_title(f"Histogram of {column}")
@@ -50,7 +60,12 @@ def scatterplot(df, x_column, y_column):
         raise ValueError(f"Column '{y_column}' not found in DataFrame")
 
     fig, ax = plt.subplots()
-    ax.scatter(df[x_column], df[y_column])
+    ax.scatter(
+        df[x_column],
+        df[y_column],
+        color=SCATTER_COLOR,
+        edgecolor=SCATTER_EDGE_COLOR,
+    )
     ax.set_xlabel(x_column)
     ax.set_ylabel(y_column)
     ax.set_title(f"{y_column} vs {x_column}")
