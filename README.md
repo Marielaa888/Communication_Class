@@ -36,10 +36,10 @@ df = pd.DataFrame({
 # Both functions return the Axes object, so you can customize it further,
 # like overriding the auto-generated title:
 ax1 = histogram(df, "Absences")
-ax1.set_title("Student Scores and Absenteeism")
+ax1.set_title("Student Scores and Absenteeism", fontsize=16, fontweight="bold")
 
 ax2 = scatterplot(df, "Absences", "Scores")
-ax2.set_title("Student Scores and Absenteeism")
+ax2.set_title("Student Scores and Absenteeism", fontsize=16, fontweight="bold")
 ```
 
 ## License

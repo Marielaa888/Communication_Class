@@ -23,6 +23,10 @@ FONT_NAME = "FreeSans"
 # Thickness of the visible (left and bottom) axis lines.
 AXIS_LINE_WIDTH = 2
 
+# Size and weight of the chart title.
+TITLE_FONT_SIZE = 16
+TITLE_FONT_WEIGHT = "bold"
+
 
 def histogram(df, column):
     """Plot a histogram of a single numeric column in a DataFrame.
@@ -50,7 +54,11 @@ def histogram(df, column):
     )
     ax.set_xlabel(column)
     ax.set_ylabel("Frequency")
-    ax.set_title(f"Histogram of {column}")
+    ax.set_title(
+        f"Histogram of {column}",
+        fontsize=TITLE_FONT_SIZE,
+        fontweight=TITLE_FONT_WEIGHT,
+    )
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)
     ax.spines["left"].set_linewidth(AXIS_LINE_WIDTH)
@@ -93,7 +101,11 @@ def scatterplot(df, x_column, y_column):
     )
     ax.set_xlabel(x_column)
     ax.set_ylabel(y_column)
-    ax.set_title(f"{y_column} vs {x_column}")
+    ax.set_title(
+        f"{y_column} vs {x_column}",
+        fontsize=TITLE_FONT_SIZE,
+        fontweight=TITLE_FONT_WEIGHT,
+    )
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)
     ax.spines["left"].set_linewidth(AXIS_LINE_WIDTH)
