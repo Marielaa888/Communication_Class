@@ -19,6 +19,9 @@ CHART_BACKGROUND_COLOR = "#A3B9CC"  # muted denim, used semi-transparent
 # Font used for all chart text (labels, title, ticks).
 FONT_NAME = "FreeSans"
 
+# Thickness of the visible (left and bottom) axis lines.
+AXIS_LINE_WIDTH = 2
+
 
 def histogram(df, column):
     """Plot a histogram of a single numeric column in a DataFrame.
@@ -49,6 +52,8 @@ def histogram(df, column):
     ax.set_title(f"Histogram of {column}")
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)
+    ax.spines["left"].set_linewidth(AXIS_LINE_WIDTH)
+    ax.spines["bottom"].set_linewidth(AXIS_LINE_WIDTH)
     ax.set_axisbelow(True)
     ax.grid(color="lightgray", linewidth=0.5, alpha=0.5)
 
@@ -90,6 +95,8 @@ def scatterplot(df, x_column, y_column):
     ax.set_title(f"{y_column} vs {x_column}")
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)
+    ax.spines["left"].set_linewidth(AXIS_LINE_WIDTH)
+    ax.spines["bottom"].set_linewidth(AXIS_LINE_WIDTH)
 
     plt.show()
     return ax
