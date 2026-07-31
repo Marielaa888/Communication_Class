@@ -16,7 +16,7 @@ SCATTER_COLOR = "#4C8577"           # muted teal-green (point fill)
 SCATTER_EDGE_COLOR = "#2F5545"      # deep pine green (point outline)
 
 # Font used for all chart text (labels, title, ticks).
-FONT_NAME = "Adobe Devanagari"
+FONT_NAME = "FreeSans"
 
 
 def histogram(df, column):
