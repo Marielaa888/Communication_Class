@@ -29,12 +29,12 @@ import pandas as pd
 from viz_library import histogram, scatterplot
 
 df = pd.DataFrame({
-    "age": [22, 25, 47, 35, 46, 29, 31],
-    "income": [30000, 32000, 58000, 45000, 60000, 41000, 47000],
+    "absences": [2, 8, 15, 0, 5, 11, 3, 9],
+    "exam_score": [92, 85, 74, 96, 88, 79, 90, 83],
 })
 
-histogram(df, "age")
-scatterplot(df, "age", "income")
+histogram(df, "absences")
+scatterplot(df, "absences", "exam_score")
 ```
 
 ## License
