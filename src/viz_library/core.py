@@ -10,9 +10,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Cool, calm shades of green used across both chart types.
-HISTOGRAM_FILL_COLOR = "#7FB3A3"    # muted seafoam green (bar fill)
+HISTOGRAM_FILL_COLOR = "#87A96B"    # eucalyptus green (bar fill)
 HISTOGRAM_EDGE_COLOR = "#2F5D50"    # deep pine green (bar outline)
-SCATTER_COLOR = "#4C8577"           # muted teal-green (point fill)
+SCATTER_COLOR = "#87A96B"           # eucalyptus green (point fill)
 SCATTER_EDGE_COLOR = "#2F5545"      # deep pine green (point outline)
 SCATTER_BACKGROUND_COLOR = "#FFE066"  # soft yellow, used semi-transparent
 
