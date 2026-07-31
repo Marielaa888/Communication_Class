@@ -45,6 +45,8 @@ def histogram(df, column):
     ax.set_title(f"Histogram of {column}")
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)
+    ax.set_axisbelow(True)
+    ax.grid(color="lightgray", linewidth=0.5, alpha=0.5)
 
     plt.show()
     return ax
