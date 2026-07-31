@@ -77,6 +77,7 @@ def scatterplot(df, x_column, y_column):
         df[y_column],
         color=SCATTER_COLOR,
         edgecolor=SCATTER_EDGE_COLOR,
+        marker="h",
     )
     ax.set_xlabel(x_column)
     ax.set_ylabel(y_column)
